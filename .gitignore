@@ -1,0 +1,9 @@
+node_modules/
+dist/
+out/
+*.log
+.DS_Store
+build/
+release/
+npm-debug.log*
+yarn-error.log*
