@@ -57,9 +57,9 @@ jobs:
       - name: Build (${{ matrix.variant }})
         run: |
           if [ "${{ matrix.variant }}" = "with-jre" ]; then
-            npm run build:dist:jre
+            npm run build:dist:jre -- --publish=never
           else
-            npm run build:dist
+            npm run build:dist -- --publish=never
           fi
         shell: bash
 

@@ -40,6 +40,8 @@ nsis:
   allowElevation: true
 linux:
   icon: resources/logos/icon.png
+  target:
+    - AppImage
 dmg:
   contents:
     - x: 130

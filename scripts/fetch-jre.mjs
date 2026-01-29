@@ -70,6 +70,20 @@ const downloadToFile = async (url, destination) => {
   await pipeline(response.body, fileStream);
 };
 
+const copyDir = async (source, destination) => {
+  await fs.mkdir(destination, { recursive: true });
+  const entries = await fs.readdir(source, { withFileTypes: true });
+  for (const entry of entries) {
+    const srcPath = path.join(source, entry.name);
+    const destPath = path.join(destination, entry.name);
+    if (entry.isDirectory()) {
+      await copyDir(srcPath, destPath);
+    } else {
+      await fs.copyFile(srcPath, destPath);
+    }
+  }
+};
+
 const extractArchive = async (archivePath, extension, destinationDir) => {
   const extractDir = `${archivePath}-extract`;
   await fs.rm(extractDir, { recursive: true, force: true });
@@ -97,7 +111,12 @@ const extractArchive = async (archivePath, extension, destinationDir) => {
   }
   await fs.rm(destinationDir, { recursive: true, force: true });
   await fs.mkdir(path.dirname(destinationDir), { recursive: true });
-  await fs.rename(sourceFolder, destinationDir);
+  try {
+    await fs.rename(sourceFolder, destinationDir);
+  } catch (error) {
+    // Fallback for cross-device rename errors (e.g., Windows runners)
+    await copyDir(sourceFolder, destinationDir);
+  }
   await fs.rm(extractDir, { recursive: true, force: true });
 };
 

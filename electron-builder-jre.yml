@@ -6,3 +6,6 @@ asarUnpack:
 extraResources:
   - from: resources/jre/${os}-${arch}
     to: jre/${os}-${arch}
+linux:
+  target:
+    - AppImage
