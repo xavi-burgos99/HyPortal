@@ -3,6 +3,7 @@ productName: HyPortal
 directories:
   output: release/${version}/${os}/no-jre
   buildResources: resources/logos
+artifactName: "${productName}-${version}-${os}-${arch}-no-jre.${ext}"
 files:
   - dist/**
   - electron/**

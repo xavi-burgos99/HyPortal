@@ -1,6 +1,7 @@
 extends: ./electron-builder.yml
 directories:
   output: release/${version}/${os}/with-jre
+artifactName: "${productName}-${version}-${os}-${arch}-with-jre.${ext}"
 asarUnpack:
   - resources/jre/${os}-${arch}/**
 extraResources:
