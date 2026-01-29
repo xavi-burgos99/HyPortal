@@ -20,12 +20,15 @@ jobs:
           - os: ubuntu-latest
             targetOs: linux
             jrePlatform: linux
+            artifactGlob: "*.AppImage"
           - os: windows-latest
             targetOs: win
             jrePlatform: win
+            artifactGlob: "*.exe"
           - os: macos-latest
             targetOs: mac
             jrePlatform: mac
+            artifactGlob: "*.dmg"
 
     steps:
       - name: Checkout
@@ -67,5 +70,30 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: hyportal-${{ env.VERSION }}-${{ matrix.targetOs }}-${{ matrix.variant }}
-          path: release/${{ env.VERSION }}/${{ matrix.targetOs }}/${{ matrix.variant }}/**
+          path: release/${{ env.VERSION }}/${{ matrix.targetOs }}/${{ matrix.variant }}/${{ matrix.artifactGlob }}
           if-no-files-found: error
+
+  release:
+    name: Draft Release
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set version env
+        run: printf 'VERSION=%s\n' "$(node -p "require('./package.json').version")" >> "$GITHUB_ENV"
+
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: artifacts
+
+      - name: Create draft release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ env.VERSION }}
+          name: HyPortal v${{ env.VERSION }}
+          draft: true
+          prerelease: false
+          files: artifacts/**/*.{exe,dmg,AppImage}
