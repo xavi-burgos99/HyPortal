@@ -1,0 +1,221 @@
+{
+  "nav": {
+    "servers": "服务器",
+    "versions": "版本",
+    "settings": "设置"
+  },
+  "layout": {
+    "tagline": "Hytale 服务器控制中心",
+    "footer": "支持世界构建、更新和玩家管理。"
+  },
+  "welcome": {
+    "actions": {
+      "back": "返回",
+      "next": "下一步",
+      "finish": "完成"
+    },
+    "slides": {
+      "intro": {
+        "title": "欢迎使用 HyPortal",
+        "subtitle": "几次点击即可启动你的 Hytale 服务器。"
+      },
+      "downloads": {
+        "title": "所有服务器集中管理",
+        "subtitle": "自动下载"
+      },
+      "install": {
+        "title": "所有服务器集中管理",
+        "subtitle": "几秒内完成安装"
+      },
+      "mods": {
+        "title": "所有服务器集中管理",
+        "subtitle": "管理你的模组（即将推出）"
+      }
+    },
+    "paginationLabel": "幻灯片 {{index}}"
+  },
+  "hero": {
+    "eyebrow": "",
+    "title": "添加下一个 Hytale 服务器",
+    "subtitle": "创建新服务器，选择版本，并快速启动。",
+    "actions": {
+      "newServer": "创建服务器"
+    }
+  },
+  "servers": {
+    "overviewTitle": "你的服务器",
+    "overviewSubtitle": "管理现有的 Hytale 服务器并保持更新。",
+    "actions": {
+      "create": "创建服务器",
+      "view": "查看详情",
+      "start": "启动",
+      "stop": "停止",
+      "changeImage": "更改图片",
+      "backToList": "返回列表",
+      "edit": "编辑",
+      "save": "保存",
+      "cancel": "取消",
+      "ok": "确定",
+      "deleteServer": "删除服务器",
+      "choosePath": "选择文件夹",
+      "createServer": "创建服务器",
+      "deleteCountdown": "删除（{{seconds}}）"
+    },
+    "status": {
+      "running": "运行中",
+      "stopped": "已停止",
+      "runningFor": "已运行 {{time}}",
+      "stoppedFor": "{{time}} 前停止"
+    },
+    "detail": {
+      "eyebrow": "服务器详情",
+      "title": "服务器：{{name}}",
+      "subtitle": "查看配置、横幅和连接详情。",
+      "empty": "请选择一个服务器以查看其详情。",
+      "imagePickerTitle": "选择横幅图片",
+      "labels": {
+        "name": "名称",
+        "version": "版本",
+        "port": "端口",
+        "path": "路径",
+        "image": "横幅图片",
+        "memory": "分配的 RAM",
+        "aotCache": "使用 AOT 缓存",
+        "disableSentry": "禁用 Sentry（插件开发期间推荐）"
+      },
+      "pathLocked": "服务器创建后无法编辑路径。",
+      "sentryDisabled": "Sentry 已禁用"
+    },
+    "console": {
+      "offline": "服务器已停止。启动后可查看控制台输出。",
+      "errorTitle": "控制台错误",
+      "errorDescription": "由于错误，控制台已关闭。",
+      "errorFallback": "发生了意外错误。"
+    },
+    "version": "版本 {{version}}",
+    "newVersionTag": "新版本",
+    "path": "路径：{{path}}",
+    "empty": {
+      "title": "你还没有设置任何服务器。",
+      "cta": "创建第一个服务器"
+    },
+    "creating": "正在创建服务器...",
+    "deleting": "正在删除服务器...",
+    "memory": {
+      "lowRamTitle": "RAM 不足",
+      "lowRamDescription": "服务器正常运行至少需要 4GB 内存。",
+      "lowRamBody": "你选择了 2GB。内存过低可能导致服务器无法稳定启动。",
+      "highRamTitle": "内存使用过高",
+      "highRamDescription": "预留大部分系统内存可能会减慢其他应用程序。",
+      "highRamBody": "分配超过 75% 的可用内存可能会影响 HyPortal 和其他应用的性能。",
+      "highRamDontRemind": "不再提醒",
+      "dontRemind": "不提醒"
+    },
+    "portInUse": {
+      "title": "端口被占用",
+      "description": "由于端口正在使用，无法启动服务器。",
+      "body": "端口 {{port}} 已被占用。",
+      "bodyNoPort": "配置的端口已被占用。"
+    },
+    "errors": {}
+  },
+  "serversDeleteModal": {
+    "title": "删除服务器",
+    "description": "这将从磁盘中删除服务器文件，且无法撤销。",
+    "path": "文件夹：{{path}}"
+  },
+  "serversModals": {
+    "missingVersionTitle": "请先下载版本",
+    "missingVersionBody": "在创建服务器之前，至少需要下载一个版本。",
+    "goToVersions": "前往版本",
+    "dismiss": "关闭"
+  },
+  "serversErrors": {
+    "nameRequired": "服务器名称是必填项。",
+    "duplicateName": "服务器名称必须唯一。",
+    "pathRequired": "请选择服务器文件夹。",
+    "pathNotEmpty": "所选文件夹必须为空。",
+    "pathValidationFailed": "无法验证所选文件夹。",
+    "createFailed": "创建服务器失败。请尝试其他文件夹。",
+    "missingVersionFiles": "所选版本不包含服务器模板。",
+    "missingJar": "服务器文件夹中缺少 HytaleServer.jar。",
+    "missingAssets": "服务器文件夹中缺少 Assets.zip。",
+    "missingAot": "AOT 缓存缺少 HytaleServer.aot。",
+    "missingJava": "未找到 Java {{version}}+。请安装 Java 或使用内置 JRE 的版本。",
+    "outdatedJava": "需要 Java {{version}} 或更高版本。"
+  },
+  "downloader": {
+    "title": "需要 Hytale 服务器管理器",
+    "body": "下载官方 Hytale 下载器以管理服务器。",
+    "download": "下载",
+    "downloading": "正在下载 Hytale 下载器...",
+    "downloadingShort": "正在下载...",
+    "extracting": "正在准备 Hytale 下载器...",
+    "extractingShort": "正在解压...",
+    "connect": "连接",
+    "authTitle": "登录 Hytale",
+    "authBody": "连接你的 Hytale 账户以运行下载器。将打开一个窗口完成登录。",
+    "authenticating": "正在等待 Hytale 登录...",
+    "authVisit": "请在打开的窗口中完成登录。如果未打开，请访问：{{url}}"
+  },
+  "java": {
+    "title": "需要 Java",
+    "bodyMissing": "请安装 Java {{version}} 或更高版本。你可以下载 Java，或使用 GitHub Releases 中已包含 Java 的安装程序。",
+    "bodyOutdated": "检测到 Java {{detected}}，但 HyPortal 需要 {{version}} 或更高版本。请安装更新的 JRE，或使用包含 Java 的安装程序。",
+    "retry": "重新检查",
+    "checking": "正在检查 Java...",
+    "unknownVersion": "未知",
+    "downloadJava": "下载 Java",
+    "getEmbedded": "获取包含 Java 的安装程序"
+  },
+  "versions": {
+    "title": "本机上的版本",
+    "subtitle": "保持构建有序并随时可部署。",
+    "actions": {
+      "checkUpdates": "检查更新",
+      "addLocal": "添加本地构建",
+      "manage": "管理",
+      "download": "下载",
+      "cancel": "取消"
+    },
+    "includePreRelease": "包含预发布通道",
+    "checking": "检查中...",
+    "downloading": "下载中...",
+    "retry": "重试",
+    "cancelling": "取消中...",
+    "empty": "尚未安装任何版本。",
+    "channel": {
+      "stable": "稳定版",
+      "preRelease": "预发布版"
+    },
+    "size": "大小：{{size}}",
+    "date": "添加于 {{date}}"
+  },
+  "settings": {
+    "title": "设置",
+    "subtitle": "本地化与启动行为。",
+    "languageLabel": "语言",
+    "languageDescription": "选择语言，或保持“自动”以跟随系统设置。",
+    "languageAuto": "自动",
+    "autostartLabel": "开机启动",
+    "autostartDescription": "在计算机启动时自动打开 HyPortal。",
+    "confirmCloseLabel": "关闭应用前询问",
+    "confirmCloseDescription": "在退出 HyPortal 时提醒将停止所有正在运行的服务器。"
+  },
+  "closeAppModal": {
+    "title": "关闭 HyPortal",
+    "description": "关闭应用将停止所有正在运行的服务器。",
+    "body": "在退出 HyPortal 之前，请确保已保存每个服务器上的工作。",
+    "buttons": {
+      "cancel": "取消",
+      "never": "不再提醒",
+      "close": "仍然关闭"
+    }
+  },
+  "shutdownModal": {
+    "title": "正在停止服务器",
+    "description": "在退出前等待所有正在运行的服务器停止。",
+    "body": "这可能需要几秒钟。如有需要，你可以强制退出。",
+    "force": "立即强制退出"
+  }
+}

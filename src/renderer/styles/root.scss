@@ -1,0 +1,59 @@
+@use 'variables' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap');
+
+:root {
+  --color-primary: #{$color-primary};
+  --color-primary-strong: #{$color-primary-strong};
+  --color-surface: #{$color-surface};
+  --color-surface-2: #{$color-surface-2};
+  --color-surface-3: #{$color-surface-3};
+  --color-text: #{$color-text};
+  --color-muted: #{$color-muted};
+  --color-border: #{$color-border};
+  --color-success: #{$color-success};
+  --color-warning: #{$color-warning};
+  --color-danger: #{$color-danger};
+  --color-danger-strong: #{$color-danger-strong};
+  --color-danger-gradient: linear-gradient(135deg, #{$color-danger}60, #{$color-danger-strong}60);
+  --radius-lg: #{$radius-lg};
+  --radius-md: #{$radius-md};
+  --radius-sm: #{$radius-sm};
+  --shadow-strong: #{$shadow-strong};
+  --shadow-soft: #{$shadow-soft};
+  --sidebar-width: #{$sidebar-width};
+  --content-padding: #{$content-padding};
+  --font-family-base: #{$font-family-base};
+  color-scheme: dark;
+  background: var(--color-surface);
+}
+
+[data-theme='light'] {
+  --color-surface: #f7f9fc;
+  --color-surface-2: #eef2f8;
+  --color-surface-3: #e5ebf6;
+  --color-text: #0d1b2a;
+  --color-muted: #44566c;
+  --color-border: rgba(0, 0, 0, 0.08);
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: var(--color-text);
+  font-family: var(--font-family-base);
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-family-base);
+}

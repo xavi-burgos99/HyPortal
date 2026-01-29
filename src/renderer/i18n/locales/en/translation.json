@@ -1,0 +1,221 @@
+{
+  "nav": {
+    "servers": "Servers",
+    "versions": "Versions",
+    "settings": "Settings"
+  },
+  "layout": {
+    "tagline": "Hytale server control center",
+    "footer": "Ready for world builds, updates, and player ops."
+  },
+  "welcome": {
+    "actions": {
+      "back": "Back",
+      "next": "Next",
+      "finish": "Finish"
+    },
+    "slides": {
+      "intro": {
+        "title": "Welcome to HyPortal",
+        "subtitle": "Spin up your Hytale server in a few clicks."
+      },
+      "downloads": {
+        "title": "All your servers in one place",
+        "subtitle": "Automatic downloads"
+      },
+      "install": {
+        "title": "All your servers in one place",
+        "subtitle": "Install in seconds"
+      },
+      "mods": {
+        "title": "All your servers in one place",
+        "subtitle": "Manage your mods (coming soon)"
+      }
+    },
+    "paginationLabel": "Slide {{index}}"
+  },
+  "hero": {
+    "eyebrow": "",
+    "title": "Add your next Hytale server",
+    "subtitle": "Create a new server, pick its version, and get it running quickly.",
+    "actions": {
+      "newServer": "Create server"
+    }
+  },
+  "servers": {
+    "overviewTitle": "Your servers",
+    "overviewSubtitle": "Manage existing Hytale servers and keep them patched.",
+    "actions": {
+      "create": "Create server",
+      "view": "View details",
+      "start": "Start",
+      "stop": "Stop",
+      "changeImage": "Change image",
+      "backToList": "Back to list",
+      "edit": "Edit",
+      "save": "Save",
+      "cancel": "Cancel",
+      "ok": "OK",
+      "deleteServer": "Delete server",
+      "choosePath": "Choose folder",
+      "createServer": "Create server",
+      "deleteCountdown": "Delete ({{seconds}})"
+    },
+    "status": {
+      "running": "Running",
+      "stopped": "Stopped",
+      "runningFor": "Running for {{time}}",
+      "stoppedFor": "Stopped {{time}} ago"
+    },
+    "detail": {
+      "eyebrow": "Server detail",
+      "title": "Server: {{name}}",
+      "subtitle": "Review configuration, banner, and connection details.",
+      "empty": "Select a server to view its details.",
+      "imagePickerTitle": "Choose a banner image",
+      "labels": {
+        "name": "Name",
+        "version": "Version",
+        "port": "Port",
+        "path": "Path",
+        "image": "Banner image",
+        "memory": "Allowed RAM",
+        "aotCache": "Use AOT cache",
+        "disableSentry": "Disable Sentry (recommended during active plugin development)"
+      },
+      "pathLocked": "Path cannot be edited after creating the server.",
+      "sentryDisabled": "Sentry is disabled"
+    },
+    "console": {
+      "offline": "Server is stopped. Start it to view console output.",
+      "errorTitle": "Console error",
+      "errorDescription": "The console was closed because of an error.",
+      "errorFallback": "An unexpected error occurred."
+    },
+    "version": "Version {{version}}",
+    "newVersionTag": "New version",
+    "path": "Path: {{path}}",
+    "empty": {
+      "title": "You haven't set up any servers yet.",
+      "cta": "Create your first server"
+    },
+    "creating": "Creating server...",
+    "deleting": "Deleting server...",
+    "memory": {
+      "lowRamTitle": "Insufficient RAM",
+      "lowRamDescription": "At least 4G are required for the server to run correctly.",
+      "lowRamBody": "You selected 2G. The server might not start reliably with so little memory.",
+      "highRamTitle": "High memory usage",
+      "highRamDescription": "Reserving most of your system RAM can slow other apps.",
+      "highRamBody": "Allocating over 75% of available RAM may hurt performance for HyPortal and other applications.",
+      "highRamDontRemind": "Don't remind me again",
+      "dontRemind": "Don't remind me"
+    },
+    "portInUse": {
+      "title": "Port in use",
+      "description": "Cannot start the server because the port is busy.",
+      "body": "Port {{port}} is already in use.",
+      "bodyNoPort": "The configured port is already in use."
+    },
+    "errors": {}
+  },
+  "serversDeleteModal": {
+    "title": "Delete server",
+    "description": "This removes the server files from disk and cannot be undone.",
+    "path": "Folder: {{path}}"
+  },
+  "serversModals": {
+    "missingVersionTitle": "Download a version first",
+    "missingVersionBody": "You need at least one downloaded version before creating a server.",
+    "goToVersions": "Go to versions",
+    "dismiss": "Close"
+  },
+  "serversErrors": {
+    "nameRequired": "Server name is required.",
+    "duplicateName": "Server name must be unique.",
+    "pathRequired": "Select a folder for your server.",
+    "pathNotEmpty": "Selected folder must be empty.",
+    "pathValidationFailed": "Couldn't validate the selected folder.",
+    "createFailed": "Failed to create the server. Try another folder.",
+    "missingVersionFiles": "The selected version does not contain a server template.",
+    "missingJar": "HytaleServer.jar is missing in the server folder.",
+    "missingAssets": "Assets.zip is missing in the server folder.",
+    "missingAot": "HytaleServer.aot is missing for the AOT cache.",
+    "missingJava": "Java {{version}}+ not found. Install Java or use the build that ships with the embedded JRE.",
+    "outdatedJava": "Java {{version}} or newer is required."
+  },
+  "downloader": {
+    "title": "Hytale server manager required",
+    "body": "Download the official Hytale downloader to manage servers.",
+    "download": "Download",
+    "downloading": "Downloading Hytale downloader...",
+    "downloadingShort": "Downloading...",
+    "extracting": "Preparing Hytale downloader...",
+    "extractingShort": "Extracting...",
+    "connect": "Connect",
+    "authTitle": "Sign in to Hytale",
+    "authBody": "Connect your Hytale account so the downloader can run. A window will open to finish sign-in.",
+    "authenticating": "Waiting for Hytale sign-in...",
+    "authVisit": "Complete sign-in in the opened window. If it did not open, visit: {{url}}"
+  },
+  "java": {
+    "title": "Java required",
+    "bodyMissing": "Install Java {{version}} or newer. Download Java or grab the installer that already includes Java from GitHub Releases.",
+    "bodyOutdated": "Detected Java {{detected}}, but HyPortal needs {{version}} or newer. Install a newer JRE or use the installer with Java included from GitHub Releases.",
+    "retry": "Check again",
+    "checking": "Checking Java...",
+    "unknownVersion": "unknown",
+    "downloadJava": "Download Java",
+    "getEmbedded": "Download HyPortal (with Java)"
+  },
+  "versions": {
+    "title": "Versions on this machine",
+    "subtitle": "Keep builds organized and ready to deploy.",
+    "actions": {
+      "checkUpdates": "Check for updates",
+      "addLocal": "Add local build",
+      "manage": "Manage",
+      "download": "Download",
+      "cancel": "Cancel"
+    },
+    "includePreRelease": "Include pre-release channel",
+    "checking": "Checking...",
+    "downloading": "Downloading...",
+    "retry": "Retry",
+    "cancelling": "Cancelling...",
+    "empty": "No versions installed yet.",
+    "channel": {
+      "stable": "Stable",
+      "preRelease": "Pre-release"
+    },
+    "size": "Size: {{size}}",
+    "date": "Added {{date}}"
+  },
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Localization and startup behaviour.",
+    "languageLabel": "Language",
+    "languageDescription": "Pick a language or stay on Automatic to follow your system.",
+    "languageAuto": "Automatic",
+    "autostartLabel": "Launch on startup",
+    "autostartDescription": "Open HyPortal automatically when your computer boots.",
+    "confirmCloseLabel": "Ask before closing the application",
+    "confirmCloseDescription": "Warn me that all running servers will be stopped when exiting HyPortal."
+  },
+  "closeAppModal": {
+    "title": "Close HyPortal",
+    "description": "Closing the application will stop all running servers.",
+    "body": "Make sure you have saved your work on each server before exiting.",
+    "buttons": {
+      "cancel": "Cancel",
+      "never": "Don't remind me again",
+      "close": "Close anyway"
+    }
+  },
+  "shutdownModal": {
+    "title": "Stopping servers",
+    "description": "Waiting for all running servers to stop before exiting.",
+    "body": "This may take a few seconds. You can force quit if needed.",
+    "force": "Force quit now"
+  }
+}

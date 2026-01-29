@@ -1,0 +1,221 @@
+{
+  "nav": {
+    "servers": "Server",
+    "versions": "Versionen",
+    "settings": "Einstellungen"
+  },
+  "layout": {
+    "tagline": "Hytale-Server-Kontrollzentrum",
+    "footer": "Bereit für Welt-Builds, Updates und Spielerverwaltung."
+  },
+  "welcome": {
+    "actions": {
+      "back": "Zurück",
+      "next": "Weiter",
+      "finish": "Fertigstellen"
+    },
+    "slides": {
+      "intro": {
+        "title": "Willkommen bei HyPortal",
+        "subtitle": "Starte deinen Hytale-Server in wenigen Klicks."
+      },
+      "downloads": {
+        "title": "Alle deine Server an einem Ort",
+        "subtitle": "Automatische Downloads"
+      },
+      "install": {
+        "title": "Alle deine Server an einem Ort",
+        "subtitle": "Installation in Sekunden"
+      },
+      "mods": {
+        "title": "Alle deine Server an einem Ort",
+        "subtitle": "Verwalte deine Mods (demnächst)"
+      }
+    },
+    "paginationLabel": "Folie {{index}}"
+  },
+  "hero": {
+    "eyebrow": "",
+    "title": "Füge deinen nächsten Hytale-Server hinzu",
+    "subtitle": "Erstelle einen neuen Server, wähle die Version und starte ihn schnell.",
+    "actions": {
+      "newServer": "Server erstellen"
+    }
+  },
+  "servers": {
+    "overviewTitle": "Deine Server",
+    "overviewSubtitle": "Verwalte bestehende Hytale-Server und halte sie aktuell.",
+    "actions": {
+      "create": "Server erstellen",
+      "view": "Details anzeigen",
+      "start": "Starten",
+      "stop": "Stoppen",
+      "changeImage": "Bild ändern",
+      "backToList": "Zurück zur Liste",
+      "edit": "Bearbeiten",
+      "save": "Speichern",
+      "cancel": "Abbrechen",
+      "ok": "OK",
+      "deleteServer": "Server löschen",
+      "choosePath": "Ordner wählen",
+      "createServer": "Server erstellen",
+      "deleteCountdown": "Löschen ({{seconds}})"
+    },
+    "status": {
+      "running": "Läuft",
+      "stopped": "Gestoppt",
+      "runningFor": "Läuft seit {{time}}",
+      "stoppedFor": "Vor {{time}} gestoppt"
+    },
+    "detail": {
+      "eyebrow": "Serverdetails",
+      "title": "Server: {{name}}",
+      "subtitle": "Überprüfe Konfiguration, Banner und Verbindungsdetails.",
+      "empty": "Wähle einen Server aus, um Details anzuzeigen.",
+      "imagePickerTitle": "Bannerbild auswählen",
+      "labels": {
+        "name": "Name",
+        "version": "Version",
+        "port": "Port",
+        "path": "Pfad",
+        "image": "Bannerbild",
+        "memory": "Zugewiesener RAM",
+        "aotCache": "AOT-Cache verwenden",
+        "disableSentry": "Sentry deaktivieren (empfohlen während aktiver Plugin-Entwicklung)"
+      },
+      "pathLocked": "Der Pfad kann nach der Servererstellung nicht mehr bearbeitet werden.",
+      "sentryDisabled": "Sentry ist deaktiviert"
+    },
+    "console": {
+      "offline": "Server ist gestoppt. Starte ihn, um die Konsolenausgabe zu sehen.",
+      "errorTitle": "Konsolenfehler",
+      "errorDescription": "Die Konsole wurde aufgrund eines Fehlers geschlossen.",
+      "errorFallback": "Ein unerwarteter Fehler ist aufgetreten."
+    },
+    "version": "Version {{version}}",
+    "newVersionTag": "Neue Version",
+    "path": "Pfad: {{path}}",
+    "empty": {
+      "title": "Du hast noch keine Server eingerichtet.",
+      "cta": "Ersten Server erstellen"
+    },
+    "creating": "Server wird erstellt...",
+    "deleting": "Server wird gelöscht...",
+    "memory": {
+      "lowRamTitle": "Unzureichender RAM",
+      "lowRamDescription": "Mindestens 4 GB sind erforderlich, damit der Server korrekt läuft.",
+      "lowRamBody": "Du hast 2 GB ausgewählt. Mit so wenig Speicher startet der Server möglicherweise nicht zuverlässig.",
+      "highRamTitle": "Hoher Speicherverbrauch",
+      "highRamDescription": "Das Reservieren des Großteils deines System-RAMs kann andere Apps verlangsamen.",
+      "highRamBody": "Die Zuweisung von über 75 % des verfügbaren RAMs kann die Leistung von HyPortal und anderen Anwendungen beeinträchtigen.",
+      "highRamDontRemind": "Nicht erneut erinnern",
+      "dontRemind": "Nicht erinnern"
+    },
+    "portInUse": {
+      "title": "Port belegt",
+      "description": "Server kann nicht gestartet werden, da der Port belegt ist.",
+      "body": "Port {{port}} wird bereits verwendet.",
+      "bodyNoPort": "Der konfigurierte Port wird bereits verwendet."
+    },
+    "errors": {}
+  },
+  "serversDeleteModal": {
+    "title": "Server löschen",
+    "description": "Dadurch werden die Serverdateien vom Datenträger entfernt und dies kann nicht rückgängig gemacht werden.",
+    "path": "Ordner: {{path}}"
+  },
+  "serversModals": {
+    "missingVersionTitle": "Zuerst eine Version herunterladen",
+    "missingVersionBody": "Du benötigst mindestens eine heruntergeladene Version, bevor du einen Server erstellen kannst.",
+    "goToVersions": "Zu den Versionen",
+    "dismiss": "Schließen"
+  },
+  "serversErrors": {
+    "nameRequired": "Servername ist erforderlich.",
+    "duplicateName": "Servername muss eindeutig sein.",
+    "pathRequired": "Wähle einen Ordner für deinen Server.",
+    "pathNotEmpty": "Der ausgewählte Ordner muss leer sein.",
+    "pathValidationFailed": "Der ausgewählte Ordner konnte nicht überprüft werden.",
+    "createFailed": "Server konnte nicht erstellt werden. Versuche einen anderen Ordner.",
+    "missingVersionFiles": "Die ausgewählte Version enthält keine Servervorlage.",
+    "missingJar": "HytaleServer.jar fehlt im Serverordner.",
+    "missingAssets": "Assets.zip fehlt im Serverordner.",
+    "missingAot": "HytaleServer.aot fehlt für den AOT-Cache.",
+    "missingJava": "Java {{version}}+ nicht gefunden. Installiere Java oder verwende den Build mit integrierter JRE.",
+    "outdatedJava": "Java {{version}} oder neuer ist erforderlich."
+  },
+  "downloader": {
+    "title": "Hytale-Server-Manager erforderlich",
+    "body": "Lade den offiziellen Hytale-Downloader herunter, um Server zu verwalten.",
+    "download": "Herunterladen",
+    "downloading": "Hytale-Downloader wird heruntergeladen...",
+    "downloadingShort": "Wird heruntergeladen...",
+    "extracting": "Hytale-Downloader wird vorbereitet...",
+    "extractingShort": "Wird entpackt...",
+    "connect": "Verbinden",
+    "authTitle": "Bei Hytale anmelden",
+    "authBody": "Verbinde dein Hytale-Konto, damit der Downloader ausgeführt werden kann. Ein Fenster wird geöffnet, um die Anmeldung abzuschließen.",
+    "authenticating": "Warten auf Hytale-Anmeldung...",
+    "authVisit": "Schließe die Anmeldung im geöffneten Fenster ab. Falls es sich nicht geöffnet hat, besuche: {{url}}"
+  },
+  "java": {
+    "title": "Java erforderlich",
+    "bodyMissing": "Installiere Java {{version}} oder neuer. Lade Java herunter oder verwende den Installer mit integriertem Java aus den GitHub Releases.",
+    "bodyOutdated": "Java {{detected}} erkannt, aber HyPortal benötigt {{version}} oder neuer. Installiere eine neuere JRE oder nutze den Installer mit integriertem Java aus den GitHub Releases.",
+    "retry": "Erneut prüfen",
+    "checking": "Java wird geprüft...",
+    "unknownVersion": "unbekannt",
+    "downloadJava": "Java herunterladen",
+    "getEmbedded": "HyPortal herunterladen (mit Java)"
+  },
+  "versions": {
+    "title": "Versionen auf diesem Rechner",
+    "subtitle": "Halte Builds organisiert und einsatzbereit.",
+    "actions": {
+      "checkUpdates": "Nach Updates suchen",
+      "addLocal": "Lokalen Build hinzufügen",
+      "manage": "Verwalten",
+      "download": "Herunterladen",
+      "cancel": "Abbrechen"
+    },
+    "includePreRelease": "Pre-Release-Kanal einschließen",
+    "checking": "Wird geprüft...",
+    "downloading": "Wird heruntergeladen...",
+    "retry": "Erneut versuchen",
+    "cancelling": "Wird abgebrochen...",
+    "empty": "Noch keine Versionen installiert.",
+    "channel": {
+      "stable": "Stabil",
+      "preRelease": "Pre-Release"
+    },
+    "size": "Größe: {{size}}",
+    "date": "Hinzugefügt am {{date}}"
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "subtitle": "Lokalisierung und Startverhalten.",
+    "languageLabel": "Sprache",
+    "languageDescription": "Wähle eine Sprache oder bleibe bei Automatisch, um deinem System zu folgen.",
+    "languageAuto": "Automatisch",
+    "autostartLabel": "Beim Start ausführen",
+    "autostartDescription": "HyPortal automatisch beim Systemstart öffnen.",
+    "confirmCloseLabel": "Vor dem Schließen der Anwendung fragen",
+    "confirmCloseDescription": "Warne mich, dass alle laufenden Server beim Beenden von HyPortal gestoppt werden."
+  },
+  "closeAppModal": {
+    "title": "HyPortal schließen",
+    "description": "Das Schließen der Anwendung stoppt alle laufenden Server.",
+    "body": "Stelle sicher, dass du deine Arbeit auf jedem Server gespeichert hast, bevor du HyPortal beendest.",
+    "buttons": {
+      "cancel": "Abbrechen",
+      "never": "Nicht erneut erinnern",
+      "close": "Trotzdem schließen"
+    }
+  },
+  "shutdownModal": {
+    "title": "Server werden gestoppt",
+    "description": "Warten, bis alle laufenden Server gestoppt sind, bevor beendet wird.",
+    "body": "Dies kann einige Sekunden dauern. Du kannst bei Bedarf das Beenden erzwingen.",
+    "force": "Jetzt Beenden erzwingen"
+  }
+}

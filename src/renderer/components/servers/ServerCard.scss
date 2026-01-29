@@ -1,0 +1,75 @@
+.hp-servers-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.hp-server-card {
+  cursor: pointer;
+  position: relative;
+  padding: 12px;
+}
+
+.hp-server-card--compact .hp-card {
+  padding: 12px;
+}
+
+.hp-server-card__compact {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.hp-server-card__image-square {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  min-width: 80px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: var(--color-surface-2);
+}
+
+.hp-server-card__image-thumb {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: var(--color-surface-3);
+}
+
+.hp-server-card__info {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hp-server-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.hp-server-card__version {
+  margin: 4px 0 0;
+  font-size: 0.75rem;
+  color: var(--color-muted);
+}
+
+.hp-server-card__title {
+  margin: 0;
+}
+
+.hp-server-card__badge {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  white-space: nowrap;
+}
+
+.hp-server-card__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}

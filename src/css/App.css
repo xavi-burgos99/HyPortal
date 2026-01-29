@@ -1,0 +1,231 @@
+html {
+  margin-top: 40px;
+  overflow: hidden;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  overflow-y: auto;
+  height: calc(100vh - 40px);
+  background: radial-gradient(circle at 20% 20%, rgba(75, 225, 236, 0.08), transparent 30%), radial-gradient(circle at 80% 10%, rgba(48, 119, 255, 0.08), transparent 26%), radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.05), transparent 24%), var(--color-surface-2);
+  background-attachment: fixed;
+}
+
+body.welcome .hp-shell__content {
+  opacity: 0;
+  pointer-events: none;
+}
+
+body.welcome .hp-sidebar {
+  left: calc(var(--sidebar-width) * -1);
+}
+
+.hp-content-area {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hp-view {
+  animation: hp-slide-in 220ms ease;
+}
+
+.hp-view--detail {
+  animation: hp-slide-in-left 220ms ease;
+}
+.hp-view--detail .hp-section {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 40px - var(--content-padding) * 2);
+}
+
+@keyframes hp-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes hp-slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+h3 {
+  margin: 2px 0 8px;
+}
+
+h4 {
+  margin: 4px 0 6px;
+}
+
+p {
+  margin: 0;
+}
+
+.hp-downloader-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(135deg, rgba(75, 225, 236, 0.18), rgba(48, 119, 255, 0.16));
+  border: 1px solid rgba(75, 225, 236, 0.3);
+}
+
+.hp-downloader-banner__title {
+  margin: 0 0 4px;
+  font-weight: 700;
+}
+
+.hp-downloader-banner__body {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.hp-downloader-placeholder {
+  margin: 6px 0 0;
+  color: var(--color-muted);
+  font-weight: 600;
+}
+
+.hp-link-button {
+  border: none;
+  background: none;
+  color: var(--color-primary);
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.hp-link-button:disabled {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.hp-delete-modal__body {
+  margin: 0;
+  color: var(--color-muted);
+}
+
+.hp-downloader-block {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-align: center;
+  border-radius: var(--radius-md);
+  padding: 24px;
+}
+
+.hp-downloader-block__title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.hp-downloader-block__body {
+  margin: 4px 0 0;
+  max-width: 540px;
+  color: var(--color-muted);
+}
+
+.hp-downloader-block__actions {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  align-items: center;
+}
+
+.hp-downloader-block__hint {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 12px;
+}
+
+.hp-versions-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.hp-versions-available {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.hp-version-download-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.hp-version-download-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hp-version-download-card__channel {
+  margin: 0;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--color-muted);
+}
+
+.hp-version-download-card__title {
+  margin: 4px 0 0;
+}
+
+.hp-versions-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+}
+
+.hp-low-ram-modal__body,
+.hp-port-modal__body {
+  margin: 0;
+  color: var(--color-text);
+}
+
+.hp-server-action-error {
+  margin: 8px 0;
+  color: #ff8b7f;
+  font-weight: 700;
+}
+
+.hp-terminal-error-box {
+  background: var(--color-surface-2);
+  border: 1px solid var(--color-border);
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+  max-height: 200px;
+  overflow: auto;
+  user-select: text;
+  white-space: pre-wrap;
+}/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,231 @@
+.hp-welcome {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  padding-top: 44px;
+  z-index: 600;
+  background: radial-gradient(circle at 20% 20%, rgba(75, 225, 236, 0.15), transparent 35%),
+    radial-gradient(circle at 80% 10%, rgba(48, 119, 255, 0.2), transparent 30%),
+    rgba(3, 9, 20, 0.95);
+}
+
+.hp-welcome__panel {
+  width: 400px;
+  height: 460px;
+  border-radius: 24px;
+  background: rgba(9, 16, 30, 0.98);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 30px 80px rgba(2, 5, 15, 0.8);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  pointer-events: auto;
+}
+
+.hp-welcome__image {
+  height: 230px;
+  flex: 0 0 230px;
+  padding: 12px 24px;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hp-welcome__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation-duration: 0.45s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+.hp-welcome__body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1 1 0;
+  padding: 12px 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hp-welcome__title,
+.hp-welcome__subtitle {
+  margin: 0;
+  text-align: center;
+  color: var(--color-text);
+}
+
+.hp-welcome__title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.hp-welcome__subtitle {
+  font-size: 1rem;
+  color: var(--color-muted);
+}
+
+.hp-welcome__text-block {
+  position: relative;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hp-welcome__text-block--subtitle {
+  min-height: 28px;
+}
+
+.hp-welcome__text-line {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation-duration: 0.45s;
+  animation-fill-mode: forwards;
+}
+
+.hp-welcome__text-line--title {
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.hp-welcome__text-line--subtitle {
+  font-size: 1rem;
+  color: var(--color-muted);
+  text-align: center;
+}
+
+.hp-welcome__text-line--enter[data-direction='right'] {
+  animation-name: text-enter-right;
+}
+
+.hp-welcome__text-line--enter[data-direction='left'] {
+  animation-name: text-enter-left;
+}
+
+.hp-welcome__text-line--exit[data-direction='right'] {
+  animation-name: text-exit-left;
+}
+
+.hp-welcome__text-line--exit[data-direction='left'] {
+  animation-name: text-exit-right;
+}
+
+.hp-welcome__actions {
+  flex: 0 0 auto;
+  padding: 20px 24px 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  .hp-welcome__buttons {
+    flex: 1 1 0;
+    display: flex;
+    gap: 8px;
+    justify-content: flex-start;
+
+    &:last-child {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.hp-welcome__points {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.hp-welcome__point {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: transparent;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.hp-welcome__point--active {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-strong));
+  border-color: transparent;
+}
+
+@keyframes hp-slide-from-right {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes hp-slide-from-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes text-enter-right {
+  0% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes text-enter-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes text-exit-right {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+}
+
+@keyframes text-exit-left {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+}

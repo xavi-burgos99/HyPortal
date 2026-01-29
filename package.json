@@ -1,0 +1,67 @@
+{
+  "name": "hyportal",
+  "version": "0.1.0",
+  "description": "HyPortal - Hytale server manager built with Electron and React.",
+  "author": "HyPortal",
+  "license": "MIT",
+  "type": "module",
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "cross-env VITE_DEV_SERVER_URL=http://localhost:5173 concurrently -k \"npm:dev:renderer\" \"npm:dev:electron\"",
+    "dev:renderer": "vite",
+    "dev:electron": "wait-on http://localhost:5173 && electron .",
+    "start": "electron .",
+    "build": "vite build && electron-builder build --dir",
+    "build:dist": "vite build && electron-builder build",
+    "build:jre": "vite build && electron-builder build --config electron-builder-jre.yml --dir",
+    "build:dist:jre": "vite build && electron-builder build --config electron-builder-jre.yml",
+    "fetch:jre": "node scripts/fetch-jre.mjs --platform win --platform linux --platform mac",
+    "lint": "echo \"Add your linter here\""
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.2",
+    "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@xterm/addon-fit": "^0.11.0",
+    "@xterm/xterm": "^6.0.0",
+    "adm-zip": "^0.5.10",
+    "classnames": "^2.3.2",
+    "i18next": "^23.10.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^13.5.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.55",
+    "@types/react-dom": "^18.2.19",
+    "@vitejs/plugin-react": "^5.0.3",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "electron": "^40.0.0",
+    "electron-builder": "^26.5.0",
+    "sass": "^1.70.0",
+    "tar": "^7.5.7",
+    "typescript": "^5.3.3",
+    "vite": "^6.4.1",
+    "wait-on": "^7.2.0"
+  },
+  "overrides": {
+    "lodash": "4.17.23",
+    "electron-builder": {
+      "lodash": "4.17.23",
+      "tar": "7.5.7"
+    },
+    "app-builder-lib": {
+      "tar": "7.5.7"
+    },
+    "dmg-builder": {
+      "tar": "7.5.7"
+    },
+    "electron-builder-squirrel-windows": {
+      "tar": "7.5.7"
+    },
+    "@electron/rebuild": {
+      "tar": "7.5.7"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+.hp-settings .hp-card {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.hp-settings__row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 0;
+}
+
+.hp-settings__row + .hp-settings__row {
+  border-top: 1px solid var(--color-border);
+}
+
+.hp-settings__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hp-settings__label {
+  margin: 0;
+  font-weight: 600;
+}
+
+.hp-settings__description {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 13px;
+}

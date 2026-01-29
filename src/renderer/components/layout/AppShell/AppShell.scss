@@ -1,0 +1,23 @@
+.hp-shell {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  user-select: none;
+
+  * {
+    box-sizing: inherit;
+  }
+}
+
+.hp-shell__body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: var(--sidebar-width) 1fr;
+}
+
+.hp-shell__content {
+  padding: var(--content-padding);
+  overflow-x: hidden;
+  min-height: calc(100vh - 40px);
+  transition: opacity 0.5s ease;
+}

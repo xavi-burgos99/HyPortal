@@ -7,3 +7,4 @@ build/
 release/
 npm-debug.log*
 yarn-error.log*
+resources/jre/

@@ -1,0 +1,25 @@
+.hp-version-card__eyebrow {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+  color: var(--color-muted);
+
+  &--stable {
+    color: #4caf50;
+  }
+
+  &--pre-release {
+    color: #ffb347;
+  }
+}
+
+.hp-version-card__title {
+  margin: 4px 0 6px;
+}
+
+.hp-version-card__meta {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 13px;
+}

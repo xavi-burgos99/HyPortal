@@ -1,0 +1,221 @@
+{
+  "nav": {
+    "servers": "サーバー",
+    "versions": "バージョン",
+    "settings": "設定"
+  },
+  "layout": {
+    "tagline": "Hytale サーバー管理センター",
+    "footer": "ワールド作成、アップデート、プレイヤー管理に対応。"
+  },
+  "welcome": {
+    "actions": {
+      "back": "戻る",
+      "next": "次へ",
+      "finish": "完了"
+    },
+    "slides": {
+      "intro": {
+        "title": "HyPortal へようこそ",
+        "subtitle": "数クリックで Hytale サーバーを起動。"
+      },
+      "downloads": {
+        "title": "すべてのサーバーを一元管理",
+        "subtitle": "自動ダウンロード"
+      },
+      "install": {
+        "title": "すべてのサーバーを一元管理",
+        "subtitle": "数秒でインストール"
+      },
+      "mods": {
+        "title": "すべてのサーバーを一元管理",
+        "subtitle": "Mod を管理（近日公開）"
+      }
+    },
+    "paginationLabel": "スライド {{index}}"
+  },
+  "hero": {
+    "eyebrow": "",
+    "title": "次の Hytale サーバーを追加",
+    "subtitle": "新しいサーバーを作成し、バージョンを選んで素早く起動。",
+    "actions": {
+      "newServer": "サーバーを作成"
+    }
+  },
+  "servers": {
+    "overviewTitle": "あなたのサーバー",
+    "overviewSubtitle": "既存の Hytale サーバーを管理し、最新の状態に保ちます。",
+    "actions": {
+      "create": "サーバーを作成",
+      "view": "詳細を表示",
+      "start": "起動",
+      "stop": "停止",
+      "changeImage": "画像を変更",
+      "backToList": "一覧に戻る",
+      "edit": "編集",
+      "save": "保存",
+      "cancel": "キャンセル",
+      "ok": "OK",
+      "deleteServer": "サーバーを削除",
+      "choosePath": "フォルダーを選択",
+      "createServer": "サーバーを作成",
+      "deleteCountdown": "削除（{{seconds}}）"
+    },
+    "status": {
+      "running": "稼働中",
+      "stopped": "停止中",
+      "runningFor": "{{time}} 稼働中",
+      "stoppedFor": "{{time}} 前に停止"
+    },
+    "detail": {
+      "eyebrow": "サーバー詳細",
+      "title": "サーバー：{{name}}",
+      "subtitle": "設定、バナー、接続情報を確認します。",
+      "empty": "詳細を表示するサーバーを選択してください。",
+      "imagePickerTitle": "バナー画像を選択",
+      "labels": {
+        "name": "名前",
+        "version": "バージョン",
+        "port": "ポート",
+        "path": "パス",
+        "image": "バナー画像",
+        "memory": "割り当て RAM",
+        "aotCache": "AOT キャッシュを使用",
+        "disableSentry": "Sentry を無効化（プラグイン開発中は推奨）"
+      },
+      "pathLocked": "サーバー作成後はパスを編集できません。",
+      "sentryDisabled": "Sentry は無効です"
+    },
+    "console": {
+      "offline": "サーバーは停止中です。起動してコンソール出力を表示してください。",
+      "errorTitle": "コンソールエラー",
+      "errorDescription": "エラーのためコンソールが閉じられました。",
+      "errorFallback": "予期しないエラーが発生しました。"
+    },
+    "version": "バージョン {{version}}",
+    "newVersionTag": "新しいバージョン",
+    "path": "パス：{{path}}",
+    "empty": {
+      "title": "まだサーバーを設定していません。",
+      "cta": "最初のサーバーを作成"
+    },
+    "creating": "サーバーを作成中...",
+    "deleting": "サーバーを削除中...",
+    "memory": {
+      "lowRamTitle": "RAM 不足",
+      "lowRamDescription": "サーバーを正しく動作させるには少なくとも 4GB が必要です。",
+      "lowRamBody": "2GB を選択しました。この容量では安定して起動しない可能性があります。",
+      "highRamTitle": "高いメモリ使用量",
+      "highRamDescription": "システム RAM の大部分を予約すると、他のアプリが遅くなる場合があります。",
+      "highRamBody": "使用可能 RAM の 75% 以上を割り当てると、HyPortal や他のアプリの性能に影響する可能性があります。",
+      "highRamDontRemind": "今後表示しない",
+      "dontRemind": "表示しない"
+    },
+    "portInUse": {
+      "title": "ポート使用中",
+      "description": "ポートが使用中のためサーバーを起動できません。",
+      "body": "ポート {{port}} は既に使用されています。",
+      "bodyNoPort": "設定されたポートは既に使用されています。"
+    },
+    "errors": {}
+  },
+  "serversDeleteModal": {
+    "title": "サーバーを削除",
+    "description": "サーバーファイルがディスクから削除され、元に戻せません。",
+    "path": "フォルダー：{{path}}"
+  },
+  "serversModals": {
+    "missingVersionTitle": "先にバージョンをダウンロードしてください",
+    "missingVersionBody": "サーバーを作成する前に、少なくとも 1 つのバージョンをダウンロードする必要があります。",
+    "goToVersions": "バージョンへ",
+    "dismiss": "閉じる"
+  },
+  "serversErrors": {
+    "nameRequired": "サーバー名は必須です。",
+    "duplicateName": "サーバー名は一意である必要があります。",
+    "pathRequired": "サーバー用のフォルダーを選択してください。",
+    "pathNotEmpty": "選択したフォルダーは空である必要があります。",
+    "pathValidationFailed": "選択したフォルダーを検証できませんでした。",
+    "createFailed": "サーバーの作成に失敗しました。別のフォルダーを試してください。",
+    "missingVersionFiles": "選択したバージョンにサーバーテンプレートが含まれていません。",
+    "missingJar": "サーバーフォルダーに HytaleServer.jar がありません。",
+    "missingAssets": "サーバーフォルダーに Assets.zip がありません。",
+    "missingAot": "AOT キャッシュ用の HytaleServer.aot がありません。",
+    "missingJava": "Java {{version}}+ が見つかりません。Java をインストールするか、内蔵 JRE 付きのビルドを使用してください。",
+    "outdatedJava": "Java {{version}} 以上が必要です。"
+  },
+  "downloader": {
+    "title": "Hytale サーバーマネージャーが必要です",
+    "body": "サーバーを管理するには公式の Hytale ダウンローダーをダウンロードしてください。",
+    "download": "ダウンロード",
+    "downloading": "Hytale ダウンローダーをダウンロード中...",
+    "downloadingShort": "ダウンロード中...",
+    "extracting": "Hytale ダウンローダーを準備中...",
+    "extractingShort": "展開中...",
+    "connect": "接続",
+    "authTitle": "Hytale にサインイン",
+    "authBody": "ダウンローダーを実行するために Hytale アカウントを接続してください。完了用のウィンドウが開きます。",
+    "authenticating": "Hytale のサインインを待機中...",
+    "authVisit": "開いたウィンドウでサインインを完了してください。開かない場合は次へ：{{url}}"
+  },
+  "java": {
+    "title": "Java が必要です",
+    "bodyMissing": "Java {{version}} 以上をインストールしてください。Java をダウンロードするか、GitHub Releases の Java 同梱インストーラーを使用してください。",
+    "bodyOutdated": "Java {{detected}} が検出されましたが、HyPortal には {{version}} 以上が必要です。新しい JRE をインストールするか、Java 同梱インストーラーを使用してください。",
+    "retry": "再チェック",
+    "checking": "Java を確認中...",
+    "unknownVersion": "不明",
+    "downloadJava": "Java をダウンロード",
+    "getEmbedded": "HyPortal をダウンロード（Java 同梱）"
+  },
+  "versions": {
+    "title": "このマシンのバージョン",
+    "subtitle": "ビルドを整理し、配備準備を整えます。",
+    "actions": {
+      "checkUpdates": "更新を確認",
+      "addLocal": "ローカルビルドを追加",
+      "manage": "管理",
+      "download": "ダウンロード",
+      "cancel": "キャンセル"
+    },
+    "includePreRelease": "プレリリースチャンネルを含める",
+    "checking": "確認中...",
+    "downloading": "ダウンロード中...",
+    "retry": "再試行",
+    "cancelling": "キャンセル中...",
+    "empty": "インストールされたバージョンはありません。",
+    "channel": {
+      "stable": "安定版",
+      "preRelease": "プレリリース"
+    },
+    "size": "サイズ：{{size}}",
+    "date": "{{date}} に追加"
+  },
+  "settings": {
+    "title": "設定",
+    "subtitle": "ローカライズと起動時の動作。",
+    "languageLabel": "言語",
+    "languageDescription": "言語を選択するか、自動でシステム設定に従います。",
+    "languageAuto": "自動",
+    "autostartLabel": "起動時に実行",
+    "autostartDescription": "コンピューター起動時に HyPortal を自動的に開きます。",
+    "confirmCloseLabel": "アプリ終了前に確認する",
+    "confirmCloseDescription": "HyPortal を終了すると、実行中のすべてのサーバーが停止することを通知します。"
+  },
+  "closeAppModal": {
+    "title": "HyPortal を終了",
+    "description": "アプリケーションを終了すると、実行中のすべてのサーバーが停止します。",
+    "body": "終了する前に、各サーバーで作業内容を保存したことを確認してください。",
+    "buttons": {
+      "cancel": "キャンセル",
+      "never": "今後表示しない",
+      "close": "それでも終了"
+    }
+  },
+  "shutdownModal": {
+    "title": "サーバーを停止中",
+    "description": "終了前に、実行中のすべてのサーバーが停止するのを待っています。",
+    "body": "数秒かかる場合があります。必要に応じて強制終了できます。",
+    "force": "今すぐ強制終了"
+  }
+}

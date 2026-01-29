@@ -1,0 +1,72 @@
+.hp-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.hp-toggle__copy {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hp-toggle__label {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.hp-toggle__description {
+  color: var(--color-muted);
+  font-size: 13px;
+}
+
+.hp-toggle__control {
+  position: relative;
+  width: 48px;
+  min-width: 48px;
+  height: 24px;
+}
+
+.hp-toggle__control input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.hp-toggle__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.08);
+  transition: 0.2s;
+  border-radius: 34px;
+  border: 1px solid var(--color-border);
+}
+
+.hp-toggle__slider::before {
+  position: absolute;
+  content: '';
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 2px;
+  background-color: #fff;
+  transition: 0.2s;
+  border-radius: 50%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.hp-toggle__control input:checked + .hp-toggle__slider {
+  background-color: rgba(75, 225, 236, 0.15);
+  border-color: rgba(75, 225, 236, 0.4);
+}
+
+.hp-toggle__control input:checked + .hp-toggle__slider::before {
+  transform: translateX(22px);
+  background: #0c1a24;
+  box-shadow: 0 8px 20px rgba(75, 225, 236, 0.35);
+}

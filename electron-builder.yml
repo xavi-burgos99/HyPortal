@@ -1,0 +1,54 @@
+appId: com.hyportal.app
+productName: HyPortal
+directories:
+  output: release/${version}/${os}/no-jre
+  buildResources: resources/logos
+files:
+  - dist/**
+  - electron/**
+  - package.json
+extraResources:
+  - from: resources/logos
+    to: logos
+mac:
+  category: public.app-category.productivity
+  icon: resources/logos/icon.icns
+win:
+  icon: resources/logos/icon.ico
+  target:
+    - target: nsis
+      arch:
+        - x64
+nsis:
+  oneClick: false
+  perMachine: true
+  allowToChangeInstallationDirectory: true
+  runAfterFinish: true
+  createDesktopShortcut: false
+  createStartMenuShortcut: false
+  installerLanguages:
+    - en-US
+    - es-ES
+    - de-DE
+    - fr-FR
+    - it-IT
+    - ja-JP
+    - pt-BR
+    - ru-RU
+    - zh-CN
+  include: resources/installer/nsis-options.nsh
+  allowElevation: true
+linux:
+  icon: resources/logos/icon.png
+dmg:
+  contents:
+    - x: 130
+      y: 220
+      type: file
+    - x: 410
+      y: 220
+      type: link
+      path: /Applications
+publish: false
+npmRebuild: false
+buildDependenciesFromSource: false

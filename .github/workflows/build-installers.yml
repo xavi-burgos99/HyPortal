@@ -1,0 +1,71 @@
+name: Build Installers
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "v*"
+
+jobs:
+  build:
+    name: ${{ matrix.os }} • ${{ matrix.variant }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        arch: [x64]
+        variant: [no-jre, with-jre]
+        include:
+          - os: ubuntu-latest
+            targetOs: linux
+            jrePlatform: linux
+          - os: windows-latest
+            targetOs: win
+            jrePlatform: win
+          - os: macos-latest
+            targetOs: mac
+            jrePlatform: mac
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+        shell: bash
+
+      - name: Clean release directory
+        run: rm -rf release
+        shell: bash
+
+      - name: Set version env
+        run: echo "VERSION=$(node -p \"require('./package.json').version\")" >> $GITHUB_ENV
+        shell: bash
+
+      - name: Prepare JRE (only for with-jre)
+        if: matrix.variant == 'with-jre'
+        run: npm run fetch:jre -- --platform ${{ matrix.jrePlatform }}
+        shell: bash
+
+      - name: Build (${{ matrix.variant }})
+        run: |
+          if [ "${{ matrix.variant }}" = "with-jre" ]; then
+            npm run build:dist:jre
+          else
+            npm run build:dist
+          fi
+        shell: bash
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: hyportal-${{ env.VERSION }}-${{ matrix.targetOs }}-${{ matrix.variant }}
+          path: release/${{ env.VERSION }}/${{ matrix.targetOs }}/${{ matrix.variant }}/**
+          if-no-files-found: error

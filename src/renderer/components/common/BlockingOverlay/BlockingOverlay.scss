@@ -1,0 +1,27 @@
+.hp-blocking-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(6, 12, 20, 0.45);
+  backdrop-filter: blur(8px);
+  z-index: 1200;
+  pointer-events: all;
+}
+
+.hp-blocking-overlay__panel {
+  padding: 14px 16px;
+  text-align: center;
+}
+
+.hp-blocking-overlay__message {
+  margin: 0;
+  font-weight: 600;
+}
+
+.hp-blocking-overlay__actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}

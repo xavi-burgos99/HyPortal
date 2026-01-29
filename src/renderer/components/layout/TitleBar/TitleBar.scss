@@ -1,0 +1,40 @@
+.hp-titlebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  -webkit-app-region: drag;
+  height: 40px;
+  background: #0b1621;
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  padding-right: 140px; /* leave room for Windows caption buttons */
+  gap: 10px;
+  z-index: 1000;
+}
+
+.hp-titlebar__drag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hp-titlebar__logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.hp-titlebar__meta {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.hp-titlebar__title {
+  font-weight: 700;
+  font-size: 13px;
+}

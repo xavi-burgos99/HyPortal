@@ -1,0 +1,8 @@
+extends: ./electron-builder.yml
+directories:
+  output: release/${version}/${os}/with-jre
+asarUnpack:
+  - resources/jre/${os}-${arch}/**
+extraResources:
+  - from: resources/jre/${os}-${arch}
+    to: jre/${os}-${arch}

@@ -1,0 +1,30 @@
+.hp-input {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--color-text);
+  font-size: 14px;
+}
+
+.hp-input__label {
+  font-weight: 600;
+}
+
+.hp-input__field {
+  background: var(--color-surface-2);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  padding: 10px 12px;
+  outline: none;
+}
+
+.hp-input__field:focus {
+  border-color: rgba(75, 225, 236, 0.6);
+  box-shadow: 0 0 0 3px rgba(75, 225, 236, 0.2);
+}
+
+.hp-input__description {
+  color: var(--color-muted);
+  font-size: 12px;
+}

@@ -1,0 +1,26 @@
+.hp-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-border);
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.hp-tag--success {
+  color: var(--color-success);
+  background: rgba(42, 255, 173, 0.08);
+  border-color: rgba(42, 255, 173, 0.3);
+}
+
+.hp-tag--neutral {
+  color: var(--color-text);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.hp-tag--warning {
+  color: var(--color-warning);
+  background: rgba(244, 199, 108, 0.08);
+  border-color: rgba(244, 199, 108, 0.3);
+}
