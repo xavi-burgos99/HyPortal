@@ -46,7 +46,7 @@ jobs:
         shell: bash
 
       - name: Set version env
-        run: echo "VERSION=$(node -p \"require('./package.json').version\")" >> $GITHUB_ENV
+        run: printf 'VERSION=%s\n' "$(node -p "require('./package.json').version")" >> "$GITHUB_ENV"
         shell: bash
 
       - name: Prepare JRE (only for with-jre)
