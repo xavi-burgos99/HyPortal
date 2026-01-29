@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Questions
+    url: https://github.com/xavi-burgos99/HyPortal/discussions
+    about: If you have any questions about the project, feel free to ask here.
