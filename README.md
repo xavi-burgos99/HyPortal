@@ -13,7 +13,6 @@
 [![CI](https://img.shields.io/github/actions/workflow/status/xavi-burgos99/hyportal/ci.yml)](https://github.com/xavi-burgos99/hyportal/actions)
 [![License](https://img.shields.io/github/license/xavi-burgos99/hyportal)](LICENSE)
 -->
-
 </div>
 
 ---
@@ -30,7 +29,9 @@
 - [Java Runtime Strategy](#java-runtime-strategy)
 - [Build & Release](#build--release)
 - [Contributing](#contributing)
+- [Author & Contact](#author--contact)
 - [License](#license)
+- [Disclaimer](#disclaimer)
 
 ---
 
@@ -179,6 +180,17 @@ Links:
 
 ---
 
+## Author & Contact
+
+Built by [@xavi-burgos99](https://github.com/xavi-burgos99) — independent, community-driven, **not affiliated with Hytale**. Support, feedback, and stars are always appreciated.
+
+- LinkedIn: [https://www.linkedin.com/in/xavi-burgos/](https://www.linkedin.com/in/xavi-burgos/)
+- GitHub: [https://github.com/xavi-burgos99](https://github.com/xavi-burgos99)
+- X/Twitter: [https://x.com/xavi_burgos99](https://x.com/xavi_burgos99)
+- Threads: [https://www.threads.com/@xavi_bf](https://www.threads.com/@xavi_bf)
+
+---
+
 ## License
 
 HyPortal is open source for **community, educational, and personal use**.
@@ -186,4 +198,10 @@ HyPortal is open source for **community, educational, and personal use**.
 Commercial use (including selling binaries or closed/for-profit derivatives) is **not permitted**. Redistributions must keep attribution and this notice.
 
 See **[LICENSE](LICENSE)** for the full terms.
+
+---
+
+## Disclaimer
+
+HyPortal is an independent, community-focused tool and is **not an official Hytale product**. For legal inquiries or takedown requests, please contact via [LinkedIn](https://www.linkedin.com/in/xavi-burgos/), [GitHub](https://github.com/xavi-burgos99), [X/Twitter](https://x.com/xavi_burgos99), or [Threads](https://www.threads.com/@xavi_bf).
 
