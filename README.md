@@ -6,13 +6,10 @@
 
 **A polished desktop command center for Hytale servers** — download versions, create instances, start/stop, and monitor logs on **Windows, macOS, and Linux**.
 
-<!-- Optional badges (enable once you have them) -->
-<!--
 [![Release](https://img.shields.io/github/v/release/xavi-burgos99/hyportal)](https://github.com/xavi-burgos99/hyportal/releases)
 [![Downloads](https://img.shields.io/github/downloads/xavi-burgos99/hyportal/total)](https://github.com/xavi-burgos99/hyportal/releases)
 [![CI](https://img.shields.io/github/actions/workflow/status/xavi-burgos99/hyportal/ci.yml)](https://github.com/xavi-burgos99/hyportal/actions)
 [![License](https://img.shields.io/github/license/xavi-burgos99/hyportal)](LICENSE)
--->
 </div>
 
 ---
